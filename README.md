@@ -57,19 +57,15 @@ const char* server = "http://YOUR_SERVER_IP/smart_parking/";
 URL: GET /insert.php?sensor_data=1,0,1,0,1,0
 Purpose: Saves sensor readings into the database.
 Response:
-
 json
-Copy
-Edit
+
 {"status":"success", "message":"Data inserted successfully"}
 🟢 2. Get Parking Slot Status
 URL: GET /get_parking_status.php
 Purpose: Retrieves the latest parking availability.
 Response:
-
 json
-Copy
-Edit
+
 {
   "status": "success",
   "data": {
@@ -87,19 +83,15 @@ Edit
 URL: POST /parking.php?action=entry&uid=10867A51
 Purpose: Logs an entry transaction and starts parking time.
 Response:
-
 json
-Copy
-Edit
+
 {"status":"success", "message":"Entry recorded successfully"}
 🟢 4. Exit Processing
 URL: POST /parking.php?action=exit&uid=10867A51
 Purpose: Logs an exit transaction, calculates cost, and updates balance.
 Response:
-
 json
-Copy
-Edit
+
 {
   "status": "success",
   "message": "Exit recorded successfully",
