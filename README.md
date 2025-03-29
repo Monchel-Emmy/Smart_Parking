@@ -38,7 +38,7 @@ Upload the **ESP8266 entry & exit codes** using Arduino IDE.
 
 ### 2️⃣ **Database Setup**
 1. Create a database **`smart_parking_system`** in MySQL.
-2. Import the provided **`smart_parking.sql`** file.
+2. Import the provided **`smart_parking_system`** file.
 3. Ensure **Apache & MySQL** are running on XAMPP.
 
 ### 3️⃣ **Backend API (PHP)**
