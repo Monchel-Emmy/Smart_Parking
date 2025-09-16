@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Smart Parking System — ESP8266 & RFID</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0f1724; --card:#0b1220; --muted:#9aa4b2; --accent:#00b894; --glass: rgba(255,255,255,0.03);
+    }
+    *{box-sizing:border-box}
+    body{font-family:Inter,system-ui,Segoe UI,Roboto,Arial; margin:0; background:linear-gradient(180deg,#071021 0%, #071229 60%); color:#e6eef6}
+    .container{max-width:1100px;margin:36px auto;padding:28px}
+
+    header{display:flex;align-items:center;gap:18px}
+    .logo{width:64px;height:64px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#00a3d6);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:20px;color:#042027}
+    h1{margin:0;font-size:24px}
+    p.lead{color:var(--muted);margin-top:6px}
+
+    .grid{display:grid;grid-template-columns:1fr 360px;gap:20px;margin-top:20px}
+    .card{background:var(--card);border-radius:14px;padding:18px;box-shadow:0 6px 18px rgba(2,6,23,0.6);}
+
+    .features{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+    .feature{background:var(--glass);padding:12px;border-radius:10px}
+
+    .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin-top:14px}
+    .gallery img{width:100%;border-radius:12px;object-fit:cover;box-shadow:0 4px 12px rgba(0,0,0,0.4)}
+
+    footer{margin-top:26px;color:var(--muted);font-size:13px;text-align:center}
+    @media (max-width:980px){.grid{grid-template-columns:1fr;}.logo{width:56px;height:56px}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">SP</div>
+      <div>
+        <h1>Smart Parking System <span style="color:var(--muted);font-weight:500">with ESP8266 &amp; RFID</span></h1>
+        <p class="lead">IoT-based parking management — real-time slot monitoring, RFID access, MySQL backend and automated gates.</p>
+      </div>
+    </header>
+
+    <div class="grid">
+      <main>
+        <section class="card">
+          <div style="display:flex;justify-content:space-between;align-items:center;">
+            <div><h2>🚀 Project Overview</h2></div>
+            <div style="text-align:right;color:var(--muted);font-size:13px">Made with ❤️ by Emmanuel TUYISENGE</div>
+          </div>
+          <a href="https://drive.google.com/file/d/10Fu_FbJOydyRdEip0_R1aawvxbuOAnVF/view?usp=sharing">DEMO VIDEO</a>
+          <a href="https://github.com/Monchel-Emmy/Smart_Parking">GitHub Code</a>
+          <p style="color:var(--muted);margin-top:12px;line-height:1.5">This project monitors parking slots using infrared sensors, controls gates via servos, and authenticates vehicles with RFID cards. The ESP8266 sends and receives data to a PHP/MySQL backend to store transactions and sensor states.</p>
+
+          <h3 style="margin-top:18px">Key Features</h3>
+          <div class="features" style="margin-top:10px">
+            <div class="feature">🔐 RFID-based access (entry & exit)</div>
+            <div class="feature">📶 ESP8266 WiFi connectivity</div>
+            <div class="feature">🚦 Live slot monitoring (IR sensors)</div>
+            <div class="feature">💾 MySQL & PHP backend</div>
+            <div class="feature">🔁 Automated gate control</div>
+            <div class="feature">💳 Payment & balance checking</div>
+          </div>
+        </section>
+<!-- Safety & Environment Monitoring -->
+<section class="card" style="margin-top:18px">
+  <h2>🔥 Safety & Environment Monitoring</h2>
+  <p style="color:var(--muted);line-height:1.6">
+    The system is not limited to parking management. It also integrates <strong>fire detection</strong> and 
+    <strong>air quality monitoring</strong> for improved safety inside the parking lot. Using sensors such as 
+    <em>MQ-2/MQ-135</em> for smoke and harmful gases and <em>temperature/IR sensors</em> for fire detection, 
+    the system can:
+  </p>
+  <ul style="margin-top:10px;line-height:1.6">
+    <li>🚨 Detect fire, smoke, or dangerous gas levels in real-time.</li>
+    <li>🌬️ Trigger exhaust fans for bad air or smoke.</li>
+    <li>💦 Activate sprinklers or fire extinguishers automatically in case of fire.</li>
+    <li>📡 Send alerts to admins and store events in the database for monitoring.</li>
+  </ul>
+  <p style="color:var(--muted);margin-top:8px">
+    This ensures the parking area is safe, eco-friendly, and responsive to emergencies without human intervention.
+  </p>
+</section>
+
+        <!-- Gallery Section -->
+        <section class="card" style="margin-top:18px">
+          <h2>📸 Project Gallery</h2>
+          <p style="color:var(--muted)">Here are some pictures of the prototype, wiring, and results:</p>
+          <div class="gallery">
+            <img src="images/whole_smart.jpg" alt="whole system">
+            <img src="images/2_entrylcc.jpg" alt="RFID Access">
+            <img src="images/1.jpg" alt="LCD Display">
+            <img src="images/2.jpg" alt="Automated Gate">
+            <img src="images/sub_fireof.jpg" alt="Automated Gate">
+          </div>
+        </section>
+
+        <!-- Future Improvements -->
+        <section class="card" style="margin-top:18px">
+          <h2>🎯 Future Improvements</h2>
+          <p style="color:var(--muted)">Mobile app integration, mobile money payments, camera-based license plate recognition, and advanced analytics dashboard.</p>
+        </section>
+      </main>
+
+      <aside>
+        <div class="card">
+          <h3>Contact & Support</h3>
+          <p style="color:var(--muted)">For questions or contributions, reach out:</p>
+          <p><strong>Email:</strong><br/>tuyisengeemmanuel1999@gmail.com</p>
+          <p><strong>Phone:</strong><br/>+250782419365</p>
+          <p style="color:var(--muted);font-size:13px">Fork on GitHub, open issues, and submit PRs to improve the project.</p>
+        </div>
+      </aside>
+    </div>
+
+    <footer>
+      <div class="card" style="display:inline-block;padding:12px 18px;border-radius:12px">
+        <strong>Smart Parking System</strong> — Showcased for IoT & RFID prototyping • © Emmanuel TUYISENGE
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
